@@ -16,7 +16,7 @@ from src.utils import save_object
 
 @dataclass
 class DataTransformationConfig:
-    preprocessor_obj_file_path = os.path.join("artifact","preprocessor.pkl")
+    preprocessor_obj_file_path = os.path.join('artifact','preprocessor.pkl')
 
 class DataTransformation:
     def __init__(self):
@@ -48,8 +48,8 @@ class DataTransformation:
                 ]
             )
             
-            logging.info("numerical column standard scaling completed: {categorical_columns}")
-            logging.info("categorical column encoding completed: {numerical_columns}")
+            logging.info(f"Numerical columns: {numerical_columns}")
+            logging.info(f"Categorical columns: {categorical_columns}")
             
             preprocessor = ColumnTransformer(
                 [
